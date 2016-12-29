@@ -1,4 +1,4 @@
 *.sublime-workspace
 .env/
 *.egg-info/**
-versioned/__pycache__/__init__.cpython-35.pyc
+__pycache__
