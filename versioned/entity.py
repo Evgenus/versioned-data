@@ -1,6 +1,9 @@
 from weakref import WeakKeyDictionary
 from weakref import WeakValueDictionary
 
+from .placeholders import Dict
+from .placeholders import List
+
 
 class DataDescriptior:
     def __init__(self, uid):
