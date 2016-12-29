@@ -1,5 +1,7 @@
 from collections import namedtuple
 
+from .types import get_registry
+
 
 CmdDict = namedtuple(
     "CmdDictObject", [
@@ -33,8 +35,11 @@ CmdRef = namedtuple(
     ])
 
 
-def get_type_dotted_name(t):
-    return "{}.{}".format(t.__module__, t.__name__)
+def get_type_dotted_name(type_):
+    registry = get_registry()
+    alias = registry.get_type(type_)
+    return "{}.{}".format(alias.__module__, alias.__name__)
+
 
 class Serializer:
     CMD_DICT = CmdDict
